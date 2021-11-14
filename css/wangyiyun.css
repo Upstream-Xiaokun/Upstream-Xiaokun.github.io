@@ -1,19 +1,18 @@
 @font-face {
-  font-family: "iconfont"; /* Project id 2936867 */
-  src: url('//at.alicdn.com/t/font_2936867_con7id9gq3p.woff2?t=1636877307958') format('woff2'),
-       url('//at.alicdn.com/t/font_2936867_con7id9gq3p.woff?t=1636877307958') format('woff'),
-       url('//at.alicdn.com/t/font_2936867_con7id9gq3p.ttf?t=1636877307958') format('truetype');
+    font-family: "iconfont";
+    /* Project id 2936867 */
+    src: url('//at.alicdn.com/t/font_2936867_con7id9gq3p.woff2?t=1636877307958') format('woff2'), url('//at.alicdn.com/t/font_2936867_con7id9gq3p.woff?t=1636877307958') format('woff'), url('//at.alicdn.com/t/font_2936867_con7id9gq3p.ttf?t=1636877307958') format('truetype');
 }
 
 .iconfont {
-  font-family: "iconfont" !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-wangyiyunyinle:before {
-  content: "\e63c";
+    font-size: 19px;
+    color: red;
 }
-
