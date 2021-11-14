@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title>MyDQL 指令速查</title>
+      <title>MySQL 指令速查</title>
       <link href="/2021/10/21/MySQL%E7%9A%84%E5%90%84%E7%A7%8D%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/"/>
       <url>/2021/10/21/MySQL%E7%9A%84%E5%90%84%E7%A7%8D%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/</url>
       
@@ -17,6 +17,16 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> 数据库 </tag>
+            
+            <tag> SQL </tag>
+            
+            <tag> MySql </tag>
+            
+        </tags>
       
     </entry>
     
@@ -37,6 +47,16 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> 信息 </tag>
+            
+            <tag> 检索 </tag>
+            
+            <tag> 论文 </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -55,6 +75,24 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> MC </tag>
+            
+            <tag> 我的世界 </tag>
+            
+            <tag> Minecraft </tag>
+            
+            <tag> 建筑地图 </tag>
+            
+            <tag> 视频 </tag>
+            
+            <tag> 光轨艺术 </tag>
+            
+            <tag> 文案 </tag>
+            
+        </tags>
       
     </entry>
     
