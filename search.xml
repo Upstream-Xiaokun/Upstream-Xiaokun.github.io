@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Hexo博客安装教程（Windwos版）</title>
+      <link href="/2021/11/14/Hexo%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+      <url>/2021/11/14/Hexo%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+      
+        <content type="html"><![CDATA[<h4 id="1、安装Git"><a href="#1、安装Git" class="headerlink" title="1、安装Git"></a>1、安装Git</h4><h4 id="2、安装Node-js"><a href="#2、安装Node-js" class="headerlink" title="2、安装Node.js"></a>2、安装Node.js</h4><p><strong>默认条件 Git  和 Node.js 已经安装完成,时间有限，后期补上教程，自行查询安装教程</strong></p><h4 id="3、安装-Hexo"><a href="#3、安装-Hexo" class="headerlink" title="3、安装 Hexo"></a>3、安装 Hexo</h4><p>①先在文件夹里面新建一个Myblog文件夹</p><p>②在 cmd 窗口输入<br>    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">下载不了的自行查询百度，换镜像源</span><br></pre></td></tr></table></figure></p><p>③查询 Hexo 版本<br>    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure></p><p>④初始化 Hexo 博客<br>    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init myblog(名字自行任意取就行)</span><br></pre></td></tr></table></figure></p><p>⑤进入 Myblog 文件夹的 myblog（之前取的名字是.mybolg）<br>    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在 Windows 下，点文件夹进入就行</span><br></pre></td></tr></table></figure></p><p>⑥进入到文件夹之后<br>    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在文件夹的空白处右键 Git Bash Here (这里限于Windows系统)</span><br></pre></td></tr></table></figure></p><pre><code>文件件下面的子文件夹config.yml: 博客的配置文件public：存放生成的页面scaffolds：生成文章的一些模板source：用来存放你的文章themes：主题node_modules: 依赖包</code></pre><p>⑦开启 Hexo 服务器<br>    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></p><p>⑧打开Hexo博客网页<br>    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将 cmd 窗口中的 地址复制到浏览器打开，看到 Hexo 博客的默认界面则代表成功</span><br></pre></td></tr></table></figure><br><img src="https://api2.mubu.com/v3/document_image/1636768507173ca74.jpg"></p><pre><code>Crtl + C 即可关闭</code></pre><h4 id="4、Hexo博客搭建完毕"><a href="#4、Hexo博客搭建完毕" class="headerlink" title="4、Hexo博客搭建完毕"></a><strong>4、Hexo博客搭建完毕</strong></h4>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 博客 </tag>
+            
+            <tag> Butterfly </tag>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MySQL 指令速查</title>
       <link href="/2021/10/21/MySQL%E7%9A%84%E5%90%84%E7%A7%8D%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/"/>
       <url>/2021/10/21/MySQL%E7%9A%84%E5%90%84%E7%A7%8D%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/</url>
