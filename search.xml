@@ -4,6 +4,69 @@
   
     
     <entry>
+      <title>Java 基础知识复习</title>
+      <link href="/2021/11/17/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/"/>
+      <url>/2021/11/17/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、Java数据类型"><a href="#一、Java数据类型" class="headerlink" title="一、Java数据类型"></a>一、Java数据类型</h3><h4 id="编程语言分为："><a href="#编程语言分为：" class="headerlink" title="编程语言分为："></a>编程语言分为：</h4><pre><code>    弱类型语言：JavaScript 、HTML、CSS    强类型语言：Java 属于强类型语言，严格遵守编程的规范</code></pre><h4 id="八大数据类型（基本类型）"><a href="#八大数据类型（基本类型）" class="headerlink" title="八大数据类型（基本类型）"></a>八大数据类型（基本类型）</h4><pre><code>    整数类型：byte/short/int/long    浮点类型：float/double    字符类型：char    布尔类型：boolean</code></pre><h4 id="引用类型（暂补充）"><a href="#引用类型（暂补充）" class="headerlink" title="引用类型（暂补充）"></a>引用类型（暂补充）</h4><pre><code>    String    注意：String 不是关键字，String属于引用类型</code></pre><h4 id="什么是字节？"><a href="#什么是字节？" class="headerlink" title="什么是字节？"></a>什么是字节？</h4><pre><code>    字节是计算机用于存储容量的一种计量单位，作为单位来处理的最小二进制数字串    一个字节有八个二进制为 例如：0100 1001</code></pre><h3 id="二、Java数据类型运用的注意事项"><a href="#二、Java数据类型运用的注意事项" class="headerlink" title="二、Java数据类型运用的注意事项"></a>二、Java数据类型运用的注意事项</h3><p>#####① 在运算精确的数值时，避免使用 float 和double 浮点类型，因为计算不精准，会出现问题</p><p>#####② 有关二进制、八进制、十六进制的区分</p><p>#####③ 字符的本质其实就是数字，所有的字符都是有一套数字编码表转换而来，例如ASCII码、Unicode</p><p>#####④ /t 、/n，属于转义字符<br><img src="https://api2.mubu.com/v3/document_image/16370272491310605.jpg" width="400"></p><p>#####⑥ 对象和字符串常量池</p><pre><code>    这里的字符串创建是放在字符串的常量池中，所以二只是相等的(true)</code></pre><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">String str1 ＝ <span class="keyword">new</span> String(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line"></span><br><span class="line">String str对象北方<span class="number">2</span> = <span class="function">nenw <span class="title">String</span><span class="params">(<span class="string">&quot;hello&quot;</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">这里的对象被放在了“堆”中，str1 和 str2 的地址值不一样，而这不相等(<span class="keyword">false</span>)</span><br><span class="line"></span><br><span class="line">String str1  =  <span class="string">&quot;hello&quot;</span>;</span><br><span class="line"></span><br><span class="line">String str2  =  <span class="string">&quot;hello&quot;</span>;</span><br></pre></td></tr></table></figure><p>#####⑦ 布尔值只有 true 和 false 两种</p><p>#####⑧ 类型转换</p><pre><code>    byte &lt;char &lt; short &lt; int &lt; long &lt; float  &lt; double  低类型——高类型    由高——转换为低 自动转换    由低——转换为高 强制转换    布尔类型无法转换</code></pre><p>#####⑨ JDK7新特性</p><pre><code>    int i ＝ 100_0000_0000;    创建较大的整形时，可以使用下划线来区分四个零</code></pre><h3 id="三、变量、常量、作用域"><a href="#三、变量、常量、作用域" class="headerlink" title="三、变量、常量、作用域"></a>三、变量、常量、作用域</h3><pre><code>        变量：Java 中变量的定义 （数据类型 名字 ＝ 值）</code></pre><h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><p><img src="https://api2.mubu.com/v3/document_image/1637113294206ed57.jpg"></p><pre><code>    类变量：加 static 关键字，属性可以直接使用</code></pre><h4 id="实例变量：从属于类对象，需要创建对象来进行使用，默认有初始化"><a href="#实例变量：从属于类对象，需要创建对象来进行使用，默认有初始化" class="headerlink" title="实例变量：从属于类对象，需要创建对象来进行使用，默认有初始化"></a>实例变量：从属于类对象，需要创建对象来进行使用，默认有初始化</h4><pre><code>    boolean 的默认值为 false    除了基本类型，其余的默认值为 null    局部变量：在方法之内，（注意：局部变量必须声明和初始化值，不然会报错，且无法使用）</code></pre><h4 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h4><pre><code>    final 常量名 ＝常量值    用 final 修饰的参数为常量，常量的值一旦确定，就不能发生改变</code></pre><h4 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h4><h5 id="包括四大类：public、protected、private、默认（容易把-protected-和-默认搞混淆）"><a href="#包括四大类：public、protected、private、默认（容易把-protected-和-默认搞混淆）" class="headerlink" title="包括四大类：public、protected、private、默认（容易把 protected 和 默认搞混淆）"></a>包括四大类：public、protected、private、默认（容易把 protected 和 默认搞混淆）</h5><pre><code>    public：对于所有的类都可以访问    private：只能在同一个 Class 中才能使用，作用域为类的内部    protected：作用域为同一个包的所有类和外部包的子类。    对于同一个包内的类，无论是是不是子孙类，都可以访问    默认类型：默认类型的访问权限为同一个包内的所有类。    外部包无论是不是子孙类都不能访问</code></pre><h4 id="Java-命名规范"><a href="#Java-命名规范" class="headerlink" title="Java 命名规范"></a>Java 命名规范</h4><p><img src="https://api2.mubu.com/v3/document_image/163715239911904f0.jpg"></p><h3 id="四、基本运算符"><a href="#四、基本运算符" class="headerlink" title="四、基本运算符"></a>四、基本运算符</h3><p>Java的基本运算符</p><img src="https://api2.mubu.com/v3/document_image/16371144632339972.jpg" width="500"><h4 id="基本类型中需要注意的问题"><a href="#基本类型中需要注意的问题" class="headerlink" title="基本类型中需要注意的问题"></a>基本类型中需要注意的问题</h4><h5 id="①-在整形的计算中，输出的结果有小数的时候需要转换类型"><a href="#①-在整形的计算中，输出的结果有小数的时候需要转换类型" class="headerlink" title="①  在整形的计算中，输出的结果有小数的时候需要转换类型"></a>①  在整形的计算中，输出的结果有小数的时候需要转换类型</h5><pre><code>    int a = 5;    int b = 2;    System.out.println(b/2);    这里的实际结果输出应该是 2.5 但是输出的结果确实 2，应为整形不是浮点数，不存在小数之说    进行一次类型转换，就正常了    system.out.println(a/(double)b); // 这样输出的结果就正确了</code></pre><h5 id="②-在整形类型的运算中（longi-nt-byte-short-）"><a href="#②-在整形类型的运算中（longi-nt-byte-short-）" class="headerlink" title="② 在整形类型的运算中（longi/nt/byte/short/）"></a>② 在整形类型的运算中（longi/nt/byte/short/）</h5><pre><code>    没有 long 长整形的时候，所有非 int 的转化为 int    int a = 10;    btye b = 2;</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 编程 </tag>
+            
+            <tag> Java </tag>
+            
+            <tag> 复习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>日常使用技巧</title>
+      <link href="/2021/11/17/%E7%BB%8F%E5%B8%B8%E7%94%A8%E5%88%B0%E7%9A%84%E6%8A%80%E5%B7%A7%EF%BC%8C%E4%BB%A5%E5%85%8D%E5%86%8D%E5%8E%BB%E6%9F%A5/"/>
+      <url>/2021/11/17/%E7%BB%8F%E5%B8%B8%E7%94%A8%E5%88%B0%E7%9A%84%E6%8A%80%E5%B7%A7%EF%BC%8C%E4%BB%A5%E5%85%8D%E5%86%8D%E5%8E%BB%E6%9F%A5/</url>
+      
+        <content type="html"><![CDATA[<h4 id="黑阈：adb激活指令-阈-读作yu，第四声"><a href="#黑阈：adb激活指令-阈-读作yu，第四声" class="headerlink" title="黑阈：adb激活指令,阈(读作yu，第四声)"></a>黑阈：adb激活指令,阈(读作yu，第四声)</h4><pre><code>adb -d shell sh /data/data/me.piebridge.brevent/brevent.sh</code></pre><p>注意在执行命令之前不要去点运行终端连接</p><h4 id="Windows-中的-host-文件的地址为"><a href="#Windows-中的-host-文件的地址为" class="headerlink" title="Windows 中的 host 文件的地址为"></a>Windows 中的 host 文件的地址为</h4><pre><code>\Windows\System32\drivers\etc\hosts</code></pre><h4 id="host-所在文件夹地址"><a href="#host-所在文件夹地址" class="headerlink" title="host 所在文件夹地址"></a>host 所在文件夹地址</h4><pre><code>C:\Windows\System32\drivers\etc</code></pre><p>用于修改 host 文件中的 IP 地址，来修复 GitHub 进不去的情况</p><h4 id="GitHub-域名地址分享网站-GitHub-520"><a href="#GitHub-域名地址分享网站-GitHub-520" class="headerlink" title="GitHub 域名地址分享网站: GitHub 520"></a>GitHub 域名地址分享网站: GitHub 520</h4><p><a href="https://gitee.com/doshengl/GitHub520">参考网址</a></p><h4 id="解决Win11-右键-新建-txt-文件消失的情况"><a href="#解决Win11-右键-新建-txt-文件消失的情况" class="headerlink" title="解决Win11 右键 新建 txt 文件消失的情况"></a>解决Win11 右键 新建 txt 文件消失的情况</h4><p><a href="http://www.miiyun.com/xy/140196.html">参考网址</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 技巧 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>部署 Hexo 博客到 GitHb 的方法</title>
+      <link href="/2021/11/17/%E9%83%A8%E7%BD%B2Hexo%E5%88%B0GitHub/"/>
+      <url>/2021/11/17/%E9%83%A8%E7%BD%B2Hexo%E5%88%B0GitHub/</url>
+      
+        <content type="html"><![CDATA[<h3 id="确保你的-git-已经安装好"><a href="#确保你的-git-已经安装好" class="headerlink" title="确保你的 git 已经安装好"></a>确保你的 git 已经安装好</h3><p>1、右键打开 Git Brash Here</p><h4 id="2、在-Git-Brash-Here-输入"><a href="#2、在-Git-Brash-Here-输入" class="headerlink" title="2、在 Git Brash Here 输入"></a>2、在 Git Brash Here 输入</h4><pre><code>git config --global user.name yournamegit config --global user.email  youremail</code></pre><h4 id="3、检查是否输入正确"><a href="#3、检查是否输入正确" class="headerlink" title="3、检查是否输入正确"></a>3、检查是否输入正确</h4><pre><code>git config user.namegit config user.email</code></pre><h4 id="4、创建-SSH-密钥"><a href="#4、创建-SSH-密钥" class="headerlink" title="4、创建 SSH 密钥"></a>4、创建 SSH 密钥</h4><pre><code>ssh-keygen -t rsa -C youremail</code></pre><h4 id="5、打开-ssh的文件夹Owner"><a href="#5、打开-ssh的文件夹Owner" class="headerlink" title="5、打开.ssh的文件夹Owner"></a>5、打开.ssh的文件夹Owner</h4><p>路径：C:\Users\minec.ssh</p><p>不同的电脑位置可能有所不同，自行查询</p><h4 id="6、打开-id-rsa-pub-公共密钥"><a href="#6、打开-id-rsa-pub-公共密钥" class="headerlink" title="6、打开 id_rsa.pub 公共密钥"></a>6、打开 id_rsa.pub 公共密钥</h4><p>注意 id_rsa 为私人密钥，不能给别人</p><h4 id="7、在Github-上配置密钥"><a href="#7、在Github-上配置密钥" class="headerlink" title="7、在Github 上配置密钥"></a>7、在Github 上配置密钥</h4><p>Setting  为 Github 个人设置</p><p><img src="https://api2.mubu.com/v3/document_image/db102ae5-0f5f-4a8b-86a6-deed12207ed3-11887302.jpg"></p><p>SSH and GPG keys 配置密钥</p><p><img src="https://api2.mubu.com/v3/document_image/53d44480-18b0-4e5b-9e61-8f4a5d001684-11887302.jpg"></p><p>再将刚刚打开的 id_rsa.pub 公共密钥里面的内容复制，点击  New SSH key</p><p><img src="https://api2.mubu.com/v3/document_image/09f51085-3bf6-4063-a87e-5ae6e6985106-11887302.jpg"></p><p>这里第一栏的 Title 名字随意，第二栏粘贴刚刚复制的内容，最后点击 Add SSH key 添加成功</p><p><img src="https://api2.mubu.com/v3/document_image/2092ff29-b199-4e2b-9c81-18e742d72f30-11887302.jpg"></p><p>如果SSH密钥添加成功，你的邮箱将收到一条来自 GitHub 邮件</p><p><img src="https://api2.mubu.com/v3/document_image/e556b620-9425-44ae-8ee6-1710e512c809-11887302.jpg"></p><h4 id="7、检测电脑端是否部署成功"><a href="#7、检测电脑端是否部署成功" class="headerlink" title="7、检测电脑端是否部署成功"></a>7、检测电脑端是否部署成功</h4><p>在 Git Brash 中输入，看到有 successfully 的单词就说明部署成功·</p><p><img src="https://api2.mubu.com/v3/document_image/3eb27842-3bed-4135-b375-f1ed298a429b-11887302.jpg"></p><h4 id="8、创建属于自己的-GitHub-仓库"><a href="#8、创建属于自己的-GitHub-仓库" class="headerlink" title="8、创建属于自己的 GitHub 仓库"></a>8、创建属于自己的 GitHub 仓库</h4><p>点开右上角的头像，选择  Your repositories</p><p><img src="https://api2.mubu.com/v3/document_image/6f79a26d-0244-4daa-9f0f-e677bdd6db30-11887302.jpg"></p><p>点击 New 创建新的仓库 </p><p><img src="https://api2.mubu.com/v3/document_image/25e55c8f-2f9c-4d13-9ff5-66ec4a6bacd7-11887302.jpg"></p><p>######## Owner 代表的是你的 GitHub 名字，Repository name 代表的是仓库名字</p><p>（注意：仓库名字格式必须为 你的 GItHub 名字.github.io）不然网页可能打不开</p><h4 id="9、修改部署配置文件，打开-myblog-文件夹里面的站点配置文件-config-yml，翻到最后"><a href="#9、修改部署配置文件，打开-myblog-文件夹里面的站点配置文件-config-yml，翻到最后" class="headerlink" title="9、修改部署配置文件，打开 myblog 文件夹里面的站点配置文件 _config.yml，翻到最后"></a>9、修改部署配置文件，打开 myblog 文件夹里面的站点配置文件 _config.yml，翻到最后</h4><p> 修改里面的内容为</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span>  </span><br><span class="line"><span class="attr">type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">repo:</span> <span class="string">https://github.com/YourgithubName/YourgithubName.github.io.git</span></span><br><span class="line"><span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure><p>repo 中第一个 YourgithubName 填写的是你的 GitHub 名字（Owner），第二个 YourgithubName.github.io 填的是你仓库（Repository name）</p><p>branch：属于仓库分支，默认就行，不用改动</p><h4 id="10、安装deploy-git"><a href="#10、安装deploy-git" class="headerlink" title="10、安装deploy-git"></a>10、安装deploy-git</h4><h5 id="安装deploy-git后，也就是部署的命令-这样你才能用命令部署到GitHub。"><a href="#安装deploy-git后，也就是部署的命令-这样你才能用命令部署到GitHub。" class="headerlink" title="安装deploy-git后，也就是部署的命令,这样你才能用命令部署到GitHub。"></a>安装deploy-git后，也就是部署的命令,这样你才能用命令部署到GitHub。</h5><pre><code>npm install hexo-deployer-git --save</code></pre><p>报错请更换下载镜像源（自行百度）</p><h4 id="11、再次打开-myblog-文件夹，右键-Git-Brash-Here-打开"><a href="#11、再次打开-myblog-文件夹，右键-Git-Brash-Here-打开" class="headerlink" title="11、再次打开 myblog 文件夹，右键 Git Brash  Here 打开"></a>11、再次打开 myblog 文件夹，右键 Git Brash  Here 打开</h4><p>按照顺序依次执行clean 初始化 myblog 里面的文件，清除之前生成的东西；hexo g 生成静态文件，hexo d 部署文件到 GitHb 的仓库里面</p><pre><code>hexo cleanhexo ghexo d</code></pre><p>依次执行完，如果没有报错，就部署文件到 GitHub 仓库里面了</p><h4 id="12、打开网站"><a href="#12、打开网站" class="headerlink" title="12、打开网站"></a>12、打开网站</h4><p><a href="http://yourgithubname.github.io(yourgithubname/">http://yourgithubname.github.io（yourgithubname</a> 你的用户名或者仓库名，二者名字一致）</p><p><img src="https://api2.mubu.com/v3/document_image/2df7a8d5-1537-483d-bd22-b8848bff29e4-11887302.jpg"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo博客安装教程（Windwos版）</title>
       <link href="/2021/11/14/Hexo%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
       <url>/2021/11/14/Hexo%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
